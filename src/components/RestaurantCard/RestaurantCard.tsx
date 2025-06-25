@@ -29,6 +29,9 @@ const Container = styled.div(
     &:hover {
       opacity: 0.9;
     }
+    &:focus {
+      outline: none;
+    }
   `
 )
 
@@ -78,7 +81,7 @@ const Closed = styled.div(
     text-align: center;
     z-index: 1;
     span {
-      color: ${color.white};
+      color: pink;
       line-height: 210px;
     }
   `
@@ -174,11 +177,11 @@ export const RestaurantCard = ({
       {isNew && <NewTag>new</NewTag>}
       <ImageContainer>
         {isClosed && (
-          <Closed>
+          <Closed role="alert">
             <Body type="span">This restaurant is closed.</Body>
           </Closed>
         )}
-        <RestaurantImage $isClosed={isClosed} loading="lazy" src={photoUrl} alt="restaurant" />
+        <RestaurantImage $isClosed={isClosed} loading="lazy" src={photoUrl} role="alertdialog" />
       </ImageContainer>
       <StyledContent>
         <StyledHeading level={2}>{name}</StyledHeading>

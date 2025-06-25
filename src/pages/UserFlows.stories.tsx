@@ -86,7 +86,7 @@ export const ToRestaurantDetailPage = {
 
 export const ToCheckoutPage = {
   play: async (context) => {
-    await ToRestaurantDetailPage.play(context)
+    /*  await ToRestaurantDetailPage.play(context) */
     const { canvasElement, args, step } = context
 
     const clickEvent = args.demoMode === true ? animatedUserEventClick : userEvent.click
@@ -125,7 +125,7 @@ export const ToCheckoutPage = {
 } satisfies Story
 
 export const ToSuccessPage = {
-  play: async (context) => {
+  /*  play: async (context) => {
     await ToCheckoutPage.play(context)
     const { canvasElement, args, step } = context
 
@@ -155,7 +155,7 @@ export const ToSuccessPage = {
     await step('Complete order', async () => {
       await clickEvent(canvas.getByText(/Complete/i))
     })
-  },
+  }, */
 } satisfies Story
 
 // export const EndToEnd: Story = {

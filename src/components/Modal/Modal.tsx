@@ -42,6 +42,7 @@ export const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
               icon="cross"
               aria-label="close modal"
               iconSize={16}
+              aria-hidden="true"
             />
           </TopBar>
           {children}

@@ -27,7 +27,7 @@ type IconButtonProps = {
 } & ComponentProps<typeof StyledButton>
 
 export const IconButton = ({ small = false, name, ...props }: IconButtonProps) => (
-  <StyledButton type="button" small={small} {...props}>
+  <StyledButton type="button" small={small} {...props} role="directory" aria-hidden="true">
     <Icon name={name} size={small ? 15 : 24} color="#202020" />
   </StyledButton>
 )
